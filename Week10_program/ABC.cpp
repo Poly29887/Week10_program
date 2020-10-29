@@ -47,14 +47,19 @@ int main()
 
 void arrange()
 {
-    int j,temp;
+    int j,k,temp;
     for (j = 0; j < 2; j++)
-    {     
-        if (num[j] > num[j + 1])
+    {   
+        for (k = j; k <3 ; k++)
         {
+           if (num[j] > num[k])
+           {
             temp = num[j];
-            num[j] = num[j + 1];
-            num[j + 1] = temp;
+            num[j] = num[k];
+            num[k] = temp;
+
+           }
         }
+       
     }
 }
